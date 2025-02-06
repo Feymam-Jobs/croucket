@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog en Tarjetas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background-color: rgb(123, 123, 180);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Croucket</h1>
+        <div class="nav">
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Servicios</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Blog</a>
+            <a href="index.html">Contacto</a>
+            <botton class="nav-item"><a class="nav-link" style="color:rgb(123, 123, 180);" href="Menu-productos.html">Sign in</a></botton>
+        </div>
+    </div>
+    <div class="container" id="blog-container">
+        <!-- Las tarjetas se generarán aquí -->
+    </div>
+    <script>
+        const posts = [
+            { title: "Tendencias en Crochet", content: "El crochet sigue en auge con patrones innovadores y colores vibrantes." },
+            { title: "El Mundo del Amigurumi", content: "Los muñecos tejidos a mano son cada vez más populares en el mercado artesanal." },
+            { title: "Nuevas Técnicas de Crochet", content: "Descubre las técnicas más modernas para mejorar tu habilidad en crochet." }
+        ];
+
+        const container = document.getElementById("blog-container");
+
+        posts.forEach(post => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
+            container.appendChild(card);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUCKET | Productos segun temporada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh+oOVwVF2/SGplUcfL8nxGiPZg5uE5yY7n1i1+zHP+A0m+By+LUjB4R+033nOrmg4wTD/L8w5p8z8E/C55rGtR3mkx" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="formato.jpg">
+    <li><i class="fa-solid fa-user"></i> Cuentas</li>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/menu.css" rel="stylesheet" />
+</head>
+<body>
+
+<style>
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh; /* Asegurar que el contenido ocupe toda la altura de la viewport */
+}
+
+.sidebar {
+    background-color: #4c6e77;
+    color: #fff;
+    width: 250px; /* Ajusta el ancho según tus necesidades */
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar li.active {
+    background-color: #10334b;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* styles.css */
+/* ... (código CSS existente) */
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid #e6caca;
+    padding: 20px;
+    background-color: #9aa9b3;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+  }
+
+  .product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  }
+
+
+
+.product img {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según tus necesidades */
+}
+
+    .nav {
+        --bs-nav-link-padding-x: 1rem;
+        --bs-nav-link-padding-y: 0.5rem;
+        --bs-nav-link-font-weight: ;
+        --bs-nav-link-color: var(--bs-link-color);
+        --bs-nav-link-hover-color: var(--bs-link-hover-color);
+        --bs-nav-link-disabled-color: #6c757d;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+      }
+
+
+    </style>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Menú Principal</h2>
+
+            <ul>
+                <li  href="#Cuentas">Cuentas</li>
+                <li href="#Tareas">Tareas</li>
+                <li href="#Nuevos">Nuevos Usuarios</li>
+                <li href="#Productos" class="active">Gestión de Productos</li>
+            </ul>
+        </nav>
+        <main>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+               <nav style="background-color: #333; padding: 15px 0;">
+                <div style="display: flex; justify-content: center;">
+                    <ul style="display: flex; list-style: none; padding: 0; margin: 0; gap: 20px;">
+                       <li style="padding: 10px;">
+                            <a href="#about" style="color: white; text-decoration: none; font-size: 16px; font-weight: bold;">Sobre nosotros</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="#services" style="color: white; text-decoration: none; font-size: 16px; font-weight: bold;">Servicios</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="guia/blog.html" style="color: white; text-decoration: none; font-size: 16px; font-weight: bold;">Blog</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="#contact" style="color: white; text-decoration: none; font-size: 16px; font-weight: bold;">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+          <!--Notificaciones-->
+            <div class="navbar align-self-center d-flex">
+                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                        <div class="input-group-text">
+                            <i class="fa fa-fw fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                </a>
+                <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                </a>
+                <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                </a>
+            </div>
+        </div>
+
+            <br/>
+        <!-- Buscador -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+            <input type="text" class="buscador" placeholder="¿En que te puedo ayudar?" id="buscador">
+                <i class="fa fa-search icono-busqueda"></i>
+
+            <div class="product-container">
+                <div class="product">
+                    <img src="pexels-2375361-16228973.jpg" alt="Producto 1">
+                    <h3>Promocion x3</h3>
+                    <p>$47.000</p>
+                    <button>Añadir al carrito</button>
+                </div>
+                <div class="product">
+                    <img src="pexels-2375361-10585047.jpg" alt="Producto 2">
+                    <h3>Precio por unidad</h3>
+                    <p>$22.000</p>
+                    <button>Añadir al carrito</button>
+                </div>
+                <div class="product">
+                    <img src="pexels-2375361-16178789.jpg" alt="Producto 2">
+                    <h3>Dos pollos plasticos amarillo </h3>
+                    <p>$37.900</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            </main>
+    </div>
+    <script src="JS/informacion.js"></script>
+</body>
+</html>
